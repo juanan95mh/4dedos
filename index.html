@@ -69,6 +69,9 @@
     <div id="register">
       <button id="register-button">Registrar entrenamiento</button>
     </div>
+    <div id="app" style="display: none;">
+      <!-- Content for the app goes here -->
+    </div>
     <div id="history" class="history-box">
       <h2>History</h2>
       <p>
@@ -93,6 +96,10 @@
             // Add login functionality here
           });
         }
+      });
+
+      document.getElementById('register-button').addEventListener('click', () => {
+        document.getElementById('app').style.display = 'block';
       });
     </script>
   </body>
