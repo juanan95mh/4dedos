@@ -48,8 +48,7 @@
     </header>
     <div id="app"></div>
     <div id="auth">
-      <button id="login-google-button">Login with Google</button>
-      <button id="logout-button">Logout</button>
+      <button id="auth-button">Login with Google</button>
     </div>
     <div class="right-column">
       <div id="history" class="history-box">
@@ -70,5 +69,23 @@
     <footer>
     </footer>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const authButton = document.getElementById('auth-button');
+        const user = null; // Replace with actual user authentication check
+
+        if (user) {
+          authButton.textContent = 'Logout';
+          authButton.addEventListener('click', () => {
+            // Add logout functionality here
+          });
+        } else {
+          authButton.textContent = 'Login with Google';
+          authButton.addEventListener('click', () => {
+            // Add login functionality here
+          });
+        }
+      });
+    </script>
   </body>
 </html>
